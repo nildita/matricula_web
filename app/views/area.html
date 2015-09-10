@@ -1,0 +1,20 @@
+<div ng-controller="areaController">
+	<input type="text" ng-model="area.tipo">
+	<input type="text" ng-model="area.descripcion">
+
+	<input type="button" ng-click="save()" value ="Save">
+	{{area.id}}
+	<table>
+		<tr>
+			<td>Tipo</td>
+			<td>Descripcion</td>
+			<td>Edit</td>
+		</tr>
+		<tr ng-repeat="d in ar_list">
+			<td>{{ d.tipo }}</td>
+			<td>{{ d.descripcion }}</td>
+			<td> <a href="" ng-click="sel(d)">Edit</a></td>
+			<td> <a href="" ng-click="delete(d)">Eliminar</a></td>
+		</tr>
+	</table>
+</div>
